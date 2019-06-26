@@ -13,5 +13,5 @@
     "tabs"
   ],
   "incognito":"split",
-  "content_security_policy": "script-src 'self' 'sha256-1DEQrcjWua4d1jiU5X4gB/h+PBwzdU/SCfVByEuTbTg=' 'sha256-YN6y+RK5oBVcLPEOqqVcYOvmOF1WnUC/K56wU0k8fwc='"
+  "content_security_policy": "script-src 'self' 'sha256-1DEQrcjWua4d1jiU5X4gB/h+PBwzdU/SCfVByEuTbTg=' 'sha256-y5uf5OXSI1OyqYJa2SpUSDDHmsOM5m6CkW7pTyZWpio='"
 }

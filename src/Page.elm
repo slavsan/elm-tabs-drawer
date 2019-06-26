@@ -25,9 +25,9 @@ main =
 
 type ActiveTab = AllTabs
                | TabsByDomain
-               | TabsByGroup
+               -- | TabsByGroup
                | SavedTabs
-               | Settings
+               -- | Settings
 
 type alias Model =
   { tabs : Tabs
@@ -237,17 +237,17 @@ viewTab tab =
                 [ viewIcon "save"
                 ]
             ]
-    , td [] [ button
-                [ classList
-                    [ ("button", True)
-                    , ("is-small", True)
-                    , ("is-white", True)
-                    , ("has-text-grey", True)
-                    ]
-                ]
-                [ viewIcon "lock-open"
-                ]
-            ]
+    -- , td [] [ button
+    --             [ classList
+    --                 [ ("button", True)
+    --                 , ("is-small", True)
+    --                 , ("is-white", True)
+    --                 , ("has-text-grey", True)
+    --                 ]
+    --             ]
+    --             [ viewIcon "lock-open"
+    --             ]
+    --         ]
     , td [] [ button
                 [ classList
                     [ ("button", True)
@@ -303,12 +303,12 @@ viewNavigationTabs model =
             [ a [ onClick (SelectTab AllTabs) ] [ text "All tabs" ] ]
         , li [ class (isActive TabsByDomain model)  ]
             [ a [ onClick (SelectTab TabsByDomain) ] [ text "Tabs by domain" ] ]
-        , li [ class (isActive TabsByGroup model)  ]
-            [ a [ onClick (SelectTab TabsByGroup) ] [ text "Tabs by group" ] ]
+        -- , li [ class (isActive TabsByGroup model)  ]
+        --     [ a [ onClick (SelectTab TabsByGroup) ] [ text "Tabs by group" ] ]
         , li [ class (isActive SavedTabs model)  ]
             [ a [ onClick (SelectTab SavedTabs) ] [ text "Saved" ] ]
-        , li [ class (isActive Settings model)  ]
-            [ a [ onClick (SelectTab Settings) ] [ text "Settings" ] ]
+        -- , li [ class (isActive Settings model)  ]
+        --     [ a [ onClick (SelectTab Settings) ] [ text "Settings" ] ]
         ]
     ]
 
@@ -393,8 +393,8 @@ viewActiveTab model =
           |> List.map viewGroupsOfTabsByDomain
           |> div []
 
-    TabsByGroup ->
-      div [] [ text "tabs by group" ]
+    -- TabsByGroup ->
+    --   div [] [ text "tabs by group" ]
 
     SavedTabs ->
       div []
@@ -403,8 +403,8 @@ viewActiveTab model =
             |> div []
         ]
 
-    Settings ->
-      div [] [ text "settings" ]
+    -- Settings ->
+    --   div [] [ text "settings" ]
 
 viewFavicon : String -> Html Msg
 viewFavicon favIconUrl =
