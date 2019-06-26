@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tabs Commander</title>
+    <link rel="stylesheet" href="vendor/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="vendor/font_awesome.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="dist/elm.app.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const appContainer = document.getElementById('app')
+    const elmApp = Elm.Main.init({ node: appContainer })
+    const app = createApp({ elmApp })
+    app.init()
+  </script>
+</body>
+</html>
